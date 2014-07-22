@@ -20,8 +20,29 @@
 #define MAGENTA 0xF81F
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
+#define DARK_GREY  0x7BEF
+#define LIGHT_GREY 0xBDF7
+
+#define PITCH_ROLL_X 20
+#define PITCH_ROLL_Y 20
+#define PITCH_ROLL_WIDTH 80
+#define PITCH_ROLL_HEIGHT 80
+
+#define DATE_TIME_X 60
+#define DATE_TIME_Y 0
+#define DATE_TIME_WIDTH 150
+#define DATE_TIME_HEIGHT 16
+
+#define HEADING_X 100
+#define HEADING_Y 20
+#define HEADING_WIDTH 80
+#define HEADING_HEIGHT 80
+
 
 void prepareTft();
-
+void fill(int color);
+void prepareInitialScreen();
+void clearPart(int, int, int, int, int);
 void displayPitchRoll(float pitch, float roll);
-
+void displayDateTime(int day, int month, int year, int hour, int minute, int second);
+void displayHeading(int heading, int gps);
